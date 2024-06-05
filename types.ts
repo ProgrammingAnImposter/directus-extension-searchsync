@@ -22,6 +22,15 @@ export type IndexerConfig = {
 	key?: string;
 	host?: string;
 	headers?: Record<string, string>;
+	proxy?: {
+		protocol?: string;
+		host: string;
+		port?: number;
+		auth?: {
+			username: string;
+			password: string;
+		}
+	}
 };
 
 export type IndexerInterface = (config: IndexerConfig) => {
